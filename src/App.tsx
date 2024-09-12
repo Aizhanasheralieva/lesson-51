@@ -13,6 +13,14 @@ const App = () => {
         {name: "Jane", age: 30},
     ]);
 
+    const changeNameToFirstPerson = () => {
+        console.log('Click the button');
+        setPeople([
+            {name: "Aizhana", age: 28, hobby: "Coding"},
+            {name: "Jane", age: 30},
+        ])
+    };
+
   return (
     <>
        <Person name={people[0].name} age={people[0].age}>
@@ -20,6 +28,7 @@ const App = () => {
        </Person>
         <Person name={people[1].name} age={people[1].age}>
         </Person>
+        <button onClick={changeNameToFirstPerson} type="button">Change name to first person</button>
     </>
   )
 };
